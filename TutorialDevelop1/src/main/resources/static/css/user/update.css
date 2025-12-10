@@ -1,0 +1,11 @@
+/* エラーメッセージを赤色で表示 */
+.error-message {
+    color: red;
+    font-size: 0.9em; /* 少し小さくして目立たせる */
+    margin-left: 10px;
+}
+
+/* エラーがある入力欄の枠線を赤色にする（オプション） */
+input.error, select.error {
+    border: 1px solid red;
+}
