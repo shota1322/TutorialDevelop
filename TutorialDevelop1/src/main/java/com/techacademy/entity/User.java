@@ -20,10 +20,10 @@ import org.hibernate.validator.constraints.Length;
 import org.springframework.transaction.annotation.Transactional; 
 
 import lombok.Data;
-import lombok.NoArgsConstructor; // ★★★ 追加 ★★★
+import lombok.NoArgsConstructor; // 追加
 
 @Data
-@NoArgsConstructor // ★★★ 追加: 引数なしコンストラクタを確実に生成 ★★★
+@NoArgsConstructor // 追加: デフォルトコンストラクタを生成
 @Entity
 @Table(name = "user")
 public class User {
@@ -52,7 +52,7 @@ public class User {
 
     /** 年齢 */
     @Min(0)
-    @Max(120)
+    @Max(value = 120, message = "120以下の値にしてください。")
     private Integer age;
 
     /** メールアドレス。50桁。null許可 */
@@ -61,7 +61,6 @@ public class User {
     @Length(max=50)
     private String email;
 
-    // ----- 追加ここから -----
     @OneToOne(mappedBy="user")
     private Authentication authentication;
 
@@ -74,5 +73,4 @@ public class User {
             authentication.setUser(null);
         }
     }
-    // ----- 追加ここまで -----
 }

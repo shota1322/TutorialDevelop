@@ -1,39 +1,11 @@
-/*
- * User更新画面 (update.css) のスタイル定義
- */
-
 /* --------------------
- * 共通スタイル
+ * 共通スタイル (省略可。既存のファイルに追記してください)
  * -------------------- */
 body {
     font-family: sans-serif;
     margin: 20px;
 }
-
-h1, h2 {
-    color: #333;
-}
-
-form {
-    border: 1px solid #ccc;
-    padding: 20px;
-    width: 400px;
-    margin-top: 15px;
-}
-
-label {
-    display: inline-block;
-    width: 120px;
-    margin-bottom: 10px;
-}
-
-input[type="text"], input[type="number"], select {
-    width: 200px;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #aaa;
-    box-sizing: border-box; /* paddingとborderを幅に含める */
-}
+/* ... その他の既存のスタイル ... */
 
 /* --------------------
  * バリデーションエラー時のスタイル
@@ -44,7 +16,6 @@ input[type="text"], input[type="number"], select {
     color: red;
     font-size: 0.9em;
     margin-left: 10px;
-    /* エラーメッセージが次の行に回り込むのを防ぐ */
     display: inline-block; 
 }
 
@@ -54,29 +25,5 @@ input[type="text"], input[type="number"], select {
     color: red !important; 
     /* 入力フィールドの枠線を赤くする */
     border: 2px solid red !important;
-    background-color: #fffafa; /* 背景を薄い赤にするとより分かりやすい */
-}
-
-/* --------------------
- * ボタン/リンクのスタイル
- * -------------------- */
-
-input[type="submit"], button {
-    padding: 8px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-    padding: 8px 15px;
-    border: 1px solid #007bff;
-}
-
-a:hover {
-    text-decoration: underline;
+    background-color: #fffafa; 
 }
