@@ -1,11 +1,82 @@
-/* エラーメッセージを赤色で表示 */
-.error-message {
-    color: red;
-    font-size: 0.9em; /* 少し小さくして目立たせる */
-    margin-left: 10px;
+/*
+ * User更新画面 (update.css) のスタイル定義
+ */
+
+/* --------------------
+ * 共通スタイル
+ * -------------------- */
+body {
+    font-family: sans-serif;
+    margin: 20px;
 }
 
-/* エラーがある入力欄の枠線を赤色にする（オプション） */
-input.error, select.error {
-    border: 1px solid red;
+h1, h2 {
+    color: #333;
+}
+
+form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 400px;
+    margin-top: 15px;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #aaa;
+    box-sizing: border-box; /* paddingとborderを幅に含める */
+}
+
+/* --------------------
+ * バリデーションエラー時のスタイル
+ * -------------------- */
+
+/* エラーメッセージのスタイル */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-left: 10px;
+    /* エラーメッセージが次の行に回り込むのを防ぐ */
+    display: inline-block; 
+}
+
+/* エラーが発生した入力フィールド、セレクトボックスに適用されるスタイル */
+.error {
+    /* 入力される文字を赤くする */
+    color: red !important; 
+    /* 入力フィールドの枠線を赤くする */
+    border: 2px solid red !important;
+    background-color: #fffafa; /* 背景を薄い赤にするとより分かりやすい */
+}
+
+/* --------------------
+ * ボタン/リンクのスタイル
+ * -------------------- */
+
+input[type="submit"], button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
 }

@@ -7,8 +7,8 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne; // 追加
-import jakarta.persistence.PreRemove; // 追加
+import jakarta.persistence.OneToOne; 
+import jakarta.persistence.PreRemove; 
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
@@ -17,11 +17,13 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
-import org.springframework.transaction.annotation.Transactional; // 追加
+import org.springframework.transaction.annotation.Transactional; 
 
 import lombok.Data;
+import lombok.NoArgsConstructor; // ★★★ 追加 ★★★
 
 @Data
+@NoArgsConstructor // ★★★ 追加: 引数なしコンストラクタを確実に生成 ★★★
 @Entity
 @Table(name = "user")
 public class User {
